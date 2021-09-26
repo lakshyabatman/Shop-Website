@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Catalog from './Components/Catalog';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import Hero from './Components/Hero';
+import ReachUs from './Components/ReachUs';
+import { NoticeBoard } from './Components/Shared/NoticeBoard';
+import NoticeBoardImage1 from './Assets/Images/NoticeBoard1.png'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+      <Header/>
+      <Hero/>
+      <Catalog/>
+      <NoticeBoard title={(
+        <h1 className="text-2xl lg:text-5xl  font-extrabold">On every purchase get colour Eye contact lenses <span className="header-head-span">free</span>.</h1>
+      )} subtitle="Best Quality Eyewear by top Brands." background="#F2F9FF" image={NoticeBoardImage1} />
+      <ReachUs/>
+      <Footer/>
+      </>
   );
 }
 

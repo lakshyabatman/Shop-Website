@@ -1,13 +1,84 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import '~antd/dist/antd.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;0,800;1,700&display=swap');
+
+html {
+    font-family: 'Open Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero {
+    background-color: #F2F9FF;
+  }
+
+
+.header-head-span {
+    color: #30E4C8;
+}
+
+.ant-card-body {
+    padding: 0;
+}
+
+.catalog-card-content h1,.catalog-card-content h4 {
+    color: white !important;
+}
+
+.catalog-subsection-head {
+    font-weight: 600;
+    color: #535766;
+}
+
+.map-location-card {
+    min-height: 300px;
+    background: #F2F9FF;
+}
+
+.footer {
+    background: #2A2A2A;
+    color:white !important;
+}
+
+.footer .reach-us-on-head {
+    color:white !important;
+}
+
+.footer-icon svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.full-menu {
+    display: block;
+}
+
+.ham-menu {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .full-menu {
+        display: none;
+    }
+    .ham-menu {
+        display: block;
+    }
+    .header-img {
+        max-width: 3rem;
+    }
+}
+
+
+.catalog-card {
+    width: 240px;
+}
+
+.ant-carousel .slick-list .slick-slide > div > div {
+    display: flex !important;
 }
